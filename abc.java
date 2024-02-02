@@ -7,15 +7,15 @@ public class abc {
 
         do {
             System.out.println("計算機能を選択してください:");
-            System.out.println("1. 平方根機能");
+            System.out.print("1. 平方根機能　　");
             System.out.println("2. 税金計算機能");
-            System.out.println("3. 時間計算機能");
+            System.out.print("3. 時間計算機能　");
             System.out.println("4. 四捨五入や切り捨て機能");
-            System.out.println("5. 万千入力機能");
+            System.out.print("5. 万千入力機能　");
             System.out.println("6. 四則混合機能");
-            System.out.println("7. 図形計算機能");
+            System.out.print("7. 図形計算機能　");
             System.out.println("8. 単位変換機能");
-            System.out.println("end. プログラムを終了");
+            System.out.print("end. プログラムを終了");
 
             command = scanner.nextLine();
 
@@ -267,7 +267,7 @@ public class abc {
             double height = Double.parseDouble(scanner.nextLine());
 
             TriangleCalculator triangleCalculator = new TriangleCalculator(base, height);
-            System.out.println("三角形の面積: " + triangleCalculator.calculateArea());
+            System.out.printf("三角形の面積: %.2f\n" , triangleCalculator.calculateArea());
         } catch (NumberFormatException e) {
             System.out.println("エラー: 無効な数値です。");
         }
@@ -282,7 +282,7 @@ public class abc {
             double horizontal = Double.parseDouble(scanner.nextLine());
 
             SquareCalculator squareCalculator = new SquareCalculator(vertical, horizontal);
-            System.out.println("四角形の面積: " + squareCalculator.calculateArea());
+            System.out.printf("四角形の面積:%.2f\n" , squareCalculator.calculateArea());
         } catch (NumberFormatException e) {
             System.out.println("エラー: 無効な数値です。");
         }
@@ -294,7 +294,7 @@ public class abc {
             double radius = Double.parseDouble(scanner.nextLine());
 
             CircleCalculator circleCalculator = new CircleCalculator(radius);
-            System.out.println("円の面積: " + circleCalculator.calculateArea());
+            System.out.printf("円の面積: %.2f\n" , circleCalculator.calculateArea());
         } catch (NumberFormatException e) {
             System.out.println("エラー: 無効な数値です。");
         }
@@ -306,7 +306,7 @@ public class abc {
             double radius = Double.parseDouble(scanner.nextLine());
 
             SphereCalculator sphereCalculator = new SphereCalculator(radius);
-            System.out.println("球の体積: " + sphereCalculator.calculateVolume());
+            System.out.printf("球の体積: %.2f\n" , sphereCalculator.calculateVolume());
         } catch (NumberFormatException e) {
             System.out.println("エラー: 無効な数値です。");
         }
@@ -324,7 +324,7 @@ public class abc {
             double height = Double.parseDouble(scanner.nextLine());
 
             TrapezoidCalculator trapezoidCalculator = new TrapezoidCalculator(upperBase, lowerBase, height);
-            System.out.println("台形の面積: " + trapezoidCalculator.calculateArea());
+            System.out.printf("台形の面積: %.2f\n" , trapezoidCalculator.calculateArea());
         } catch (NumberFormatException e) {
             System.out.println("エラー: 無効な数値です。");
         }

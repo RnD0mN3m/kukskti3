@@ -1,10 +1,13 @@
 package kukskti3;
 
 import java.util.Scanner;
-
+// 単位変換を行うクラス
 public class UnitConversionCalculator {
 
     // 長さの変換
+    /**
+     * @param value 変換する値
+     */
     public static void convertLength(double value) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("変換元の長さの単位を選択してください:");
@@ -54,6 +57,9 @@ public class UnitConversionCalculator {
     }
 
     // 重さの変換
+    /**
+     * @param value 変換する値
+     */
     public static void convertWeight(double value) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("変換元の重さの単位を選択してください:");
@@ -103,6 +109,9 @@ public class UnitConversionCalculator {
     }
 
     // 容積の変換
+    /**
+     * @param value 変換する値
+     */
     public static void convertVolume(double value) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("変換元の容積の単位を選択してください:");
@@ -154,6 +163,12 @@ public class UnitConversionCalculator {
     // 他の変換カテゴリ（長さ、重さ）に対する変換メソッドを追加する
 
     // 長さの単位名を取得
+    /**
+     * 指定された長さの単位に対応する単位名を取得します。
+     *
+     * @param unitChoice 長さの単位選択
+     * @return 単位名
+     */
     public static String getLengthUnitName(int unitChoice) {
         switch (unitChoice) {
             case 1:
@@ -170,6 +185,12 @@ public class UnitConversionCalculator {
     }
 
     // 重さの単位名を取得
+    /**
+     * 指定された重さの単位に対応する単位名を取得します。
+     *
+     * @param unitChoice 重さの単位選択
+     * @return 単位名
+     */
     public static String getWeightUnitName(int unitChoice) {
         switch (unitChoice) {
             case 1:
@@ -186,6 +207,12 @@ public class UnitConversionCalculator {
     }
 
     // 容積の単位名を取得
+    /**
+     * 指定された容積の単位に対応する単位名を取得します。
+     *
+     * @param unitChoice 容積の単位選択
+     * @return 単位名
+     */
     public static String getVolumeUnitName(int unitChoice) {
         switch (unitChoice) {
             case 1:

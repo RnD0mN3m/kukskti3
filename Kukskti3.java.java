@@ -1,6 +1,13 @@
 package kukskti3;
 import java.util.Scanner;
-public class abc {
+/**
+ * 計算機能を提供するクラス
+ */
+class Kukskti3 {
+    /**
+     * メインメソッド
+     * @param args コマンドライン引数
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String command;
@@ -55,6 +62,11 @@ public class abc {
         scanner.close();
     }
 
+    /**
+    * 平方根機能を実行し、ユーザーに数値の入力を求めます。。
+    *
+    * @param scanner ユーザー入力に使用される Scanner オブジェクト。
+    */
     private static void executeSquareRootFeature(Scanner scanner) {
         SquareRootCalculator squareRootCalculator = new SquareRootCalculator();
 
@@ -68,6 +80,10 @@ public class abc {
         }
     }
 
+    /**
+     * 税金計算機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeTaxCalculationFeature(Scanner scanner) {
         try {
             System.out.println("価格を入力してください:");
@@ -84,6 +100,10 @@ public class abc {
         }
     }
 
+    /**
+     * 時間計算機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeTimeCalculationFeature(Scanner scanner) {
         try {
             System.out.println("秒数を入力してください:");
@@ -96,6 +116,10 @@ public class abc {
         }
     }
 
+    /**
+     * 四捨五入や切り捨て機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeRounding1Feature(Scanner scanner) {
         RoundingCalculator roundingCalculator = new RoundingCalculator();
 
@@ -115,6 +139,10 @@ public class abc {
         }
     }
     
+    /**
+     *万千入力機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeThousandInputFeature(Scanner scanner) {
         NumberInputCalculator numberInputCalculator = new NumberInputCalculator();
 
@@ -128,6 +156,10 @@ public class abc {
         }
     }
 
+    /**
+     *  四則混合機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeMixedOperationFeature(Scanner scanner) {
         // MixedOperationCalculator mixedOperationCalculator = new MixedOperationCalculator();
         String command;
@@ -180,6 +212,10 @@ public class abc {
         }
     }
 
+    /**
+     * 図形計算機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeShapeCalculationFeature(Scanner scanner) {
         String shape;
         try{
@@ -224,6 +260,10 @@ public class abc {
         }
     }
 
+    /**
+     * 単位変換機能を実行するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeUnitConversionFeature(Scanner scanner) {
         try {
             // カテゴリの選択
@@ -257,7 +297,10 @@ public class abc {
         }
     }
 
-
+    /**
+     * 三角形の面積を計算するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeTriangleCalculation(Scanner scanner) {
         try{
             System.out.println("底辺の長さを入力してください:");
@@ -273,12 +316,16 @@ public class abc {
         }
     }
 
+    /**
+     * 四角形の面積を計算するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeSquareCalculation(Scanner scanner) {
         try{
-            System.out.println("縦の長さを入力してください:");
+            System.out.println("縦の辺の長さを入力してください:");
             double vertical = Double.parseDouble(scanner.nextLine());
 
-            System.out.println("横の長さを入力してください:");
+            System.out.println("横の辺の長さを入力してください:");
             double horizontal = Double.parseDouble(scanner.nextLine());
 
             SquareCalculator squareCalculator = new SquareCalculator(vertical, horizontal);
@@ -288,6 +335,10 @@ public class abc {
         }
     }
 
+    /**
+     * 円の面積を計算するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeCircleCalculation(Scanner scanner) {
         try{
             System.out.println("半径を入力してください:");
@@ -300,6 +351,10 @@ public class abc {
         }
     }
 
+    /**
+     * 球の体積を計算するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeSphereCalculation(Scanner scanner) {
         try{
             System.out.println("半径を入力してください:");
@@ -312,6 +367,10 @@ public class abc {
         }
     }
 
+    /**
+     * 台形の面積を計算するメソッド
+     * @param scanner 入力を受け取るための Scanner オブジェクト
+     */
     private static void executeTrapezoidCalculation(Scanner scanner) {
         try{
             System.out.println("上底の長さを入力してください:");

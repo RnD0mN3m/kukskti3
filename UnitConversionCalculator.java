@@ -10,18 +10,25 @@ public class UnitConversionCalculator {
      */
     public static void convertLength(double value) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("変換元の長さの単位を選択してください:");
+
+        // 変換元の長さの単位を選択
         System.out.println("1. メートル");
         System.out.println("2. キロメートル");
         System.out.println("3. センチメートル");
         System.out.println("4. ミリメートル");
+
+        System.out.print("変換元の長さの単位を選択してください:");
         int sourceUnitChoice = scanner.nextInt();
 
-        System.out.println("変換先の長さの単位を選択してください:");
+        System.out.println();
+
+        // 変換先の長さの単位を選択
         System.out.println("1. メートル");
         System.out.println("2. キロメートル");
         System.out.println("3. センチメートル");
         System.out.println("4. ミリメートル");
+
+        System.out.print("変換先の長さの単位を選択してください:");
         int targetUnitChoice = scanner.nextInt();
 
         double result = 0.0;
@@ -34,7 +41,7 @@ public class UnitConversionCalculator {
                         result = value;
                         break;
                     case 2: // キロメートル
-                        result = value / 1000.0;
+                        result = value * 0.001;
                         break;
                     case 3: // センチメートル
                         result = value * 100.0;
@@ -43,17 +50,19 @@ public class UnitConversionCalculator {
                         result = value * 1000.0;
                         break;
                     default:
-                        System.out.println("無効な長さの単位変換です。");
+                        System.out.println("エラー：無効な長さの単位変換です。");
                         return;
                 }
                 break;
             // 他の変換元の単位に対する処理を追加
             default:
-                System.out.println("無効な長さの単位変換です。");
+                System.out.println("エラー：無効な長さの単位変換です。");
                 return;
         }
 
+        // 変換後の結果を表示
         System.out.println("変換後の値: " + result + " " + getLengthUnitName(targetUnitChoice));
+        System.out.println();
     }
 
     // 重さの変換
@@ -62,18 +71,25 @@ public class UnitConversionCalculator {
      */
     public static void convertWeight(double value) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("変換元の重さの単位を選択してください:");
+        
+        // 変換元の重さの単位を選択
         System.out.println("1. キログラム");
         System.out.println("2. トン");
         System.out.println("3. グラム");
         System.out.println("4. ミリグラム");
+
+        System.out.print("変換元の重さの単位を選択してください:");
         int sourceUnitChoice = scanner.nextInt();
 
-        System.out.println("変換先の重さの単位を選択してください:");
+        System.out.println();
+
+        // 変換先の重さの単位を選択
         System.out.println("1. キログラム");
         System.out.println("2. トン");
         System.out.println("3. グラム");
         System.out.println("4. ミリグラム");
+
+        System.out.print("変換先の重さの単位を選択してください:");
         int targetUnitChoice = scanner.nextInt();
 
         double result = 0.0;
@@ -86,7 +102,7 @@ public class UnitConversionCalculator {
                         result = value;
                         break;
                     case 2: // トン
-                        result = value / 1000.0;
+                        result = value * 0.001;
                         break;
                     case 3: // グラム
                         result = value * 1000.0;
@@ -95,17 +111,19 @@ public class UnitConversionCalculator {
                         result = value * 1000000.0;
                         break;
                     default:
-                        System.out.println("無効な重さの単位変換です。");
+                        System.out.println("エラー：無効な重さの単位変換です。");
                         return;
                 }
                 break;
             // 他の変換元の単位に対する処理を追加
             default:
-                System.out.println("無効な重さの単位変換です。");
+                System.out.println("エラー：無効な重さの単位変換です。");
                 return;
         }
 
+        // 変換先の重さの単位を選択
         System.out.println("変換後の値: " + result + " " + getWeightUnitName(targetUnitChoice));
+        System.out.println();
     }
 
     // 容積の変換
@@ -114,18 +132,23 @@ public class UnitConversionCalculator {
      */
     public static void convertVolume(double value) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("変換元の容積の単位を選択してください:");
+        
+        // 変換元の容積の単位を選択
         System.out.println("1. リットル");
         System.out.println("2. キロリットル");
         System.out.println("3. デシリットル");
         System.out.println("4. ミリリットル");
+        System.out.print("変換元の容積の単位を選択してください:");
         int sourceUnitChoice = scanner.nextInt();
 
-        System.out.println("変換先の容積の単位を選択してください:");
+        System.out.println();
+        
+        // 変換先の容積の単位を選択
         System.out.println("1. リットル");
         System.out.println("2. キロリットル");
         System.out.println("3. デシリットル");
         System.out.println("4. ミリリットル");
+        System.out.print("変換先の容積の単位を選択してください:");
         int targetUnitChoice = scanner.nextInt();
 
         double result = 0.0;
@@ -138,7 +161,7 @@ public class UnitConversionCalculator {
                         result = value;
                         break;
                     case 2: // キロリットル
-                        result = value / 1000.0;
+                        result = value * 0.001;
                         break;
                     case 3: // デシリットル
                         result = value * 10.0;
@@ -147,17 +170,19 @@ public class UnitConversionCalculator {
                         result = value * 1000.0;
                         break;
                     default:
-                        System.out.println("無効な容積の単位変換です。");
+                        System.out.println("エラー：無効な容積の単位変換です。");
                         return;
                 }
                 break;
             // 他の変換元の単位に対する処理を追加
             default:
-                System.out.println("無効な容積の単位変換です。");
+                System.out.println("エラー：無効な容積の単位変換です。");
                 return;
         }
 
+        // 変換後の結果を表示
         System.out.println("変換後の値: " + result + " " + getVolumeUnitName(targetUnitChoice));
+        System.out.println();
     }
 
     // 他の変換カテゴリ（長さ、重さ）に対する変換メソッドを追加する

@@ -25,6 +25,8 @@ class MixedOperationCalculator {
                     System.out.println("エラー: ゼロで割り算はできません");
                     return 0;
                 }
+            case "%":
+                return num1 % num2;
             default:
                 System.out.println("無効な演算子です。");
                 return 0;
